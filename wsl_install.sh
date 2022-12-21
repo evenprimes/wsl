@@ -8,8 +8,7 @@ cp --verbose ./bashrc_wsl ~/.bashrc
 
 SCRIPTS="update_omp.sh"
 
-for i in $SCRIPTS
-do
+for i in $SCRIPTS; do
     cp --verbose $i ~/bin/
     chmod +x ~/bin/$i
 done
