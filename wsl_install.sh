@@ -7,15 +7,15 @@ reset='\033[0m'
 
 SCRIPTS="update_omp.sh"
 
-echo -e "${green}Copying config files"
+echo -e "${green}Copying config files${reset}"
 cp --verbose ./mosquitto_sub ~/.config/mosquitto_sub
 cp --verbose ./bashrc_wsl ~/.bashrc
 
-echo -e "${green}Creating directories"
+echo -e "${green}Creating directories${reset}"
 [ ! -d ~/bin ] && mkdir ~/bin || echo ~/bin/ exists
 [ ! -d ~/.1password ] && mkdir ~/.1password || echo ~/.1password/ exists
 
-echo -e "${green}Installing scripts"
+echo -e "${green}Installing scripts${reset}"
 for i in $SCRIPTS; do
     cp --verbose $i ~/bin/
     chmod +x ~/bin/$i
