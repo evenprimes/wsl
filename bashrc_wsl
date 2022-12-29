@@ -142,6 +142,11 @@ if [[ $ALREADY_RUNNING != "0" ]]; then
     (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
 fi
 
+# Setup colors
+green='\e[0;32m'
+yellow='\e[0;33m'
+reset='\033[0m'
+
 type -P neofetch >/dev/null && neofetch || echo neofetch not installed
 eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/evenprimes/ompthemes/main/bubblesextra.omp.json)"
-oh-my-posh --version
+echo -e "${yellow}oh-my-posh version is $(oh-my-posh --version)${reset}"
