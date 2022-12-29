@@ -149,4 +149,4 @@ reset='\033[0m'
 
 type -P neofetch >/dev/null && neofetch || echo neofetch not installed
 eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/evenprimes/ompthemes/main/bubblesextra.omp.json)"
-echo -e "${yellow}oh-my-posh version is $(oh-my-posh --version)${reset}"
+echo -e "${green}oh-my-posh version is ${yellow}$(oh-my-posh --version)${reset}"
